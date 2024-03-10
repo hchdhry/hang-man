@@ -2,7 +2,7 @@ import { useState } from 'react'
 import words from "./WordList.json"
 import {HangmanDrawing} from "./Components/HangManDrawing"
 import {HangmanWord} from "./Components/HangManWord"
-import Keyboard from "./Components/KeyBoard"
+import {Keyboard} from "./Components/KeyBoard"
 import './App.css'
 
 function App() {
@@ -22,7 +22,9 @@ console.log(wordToGuess)
 }}>
     
    <HangmanDrawing/>
-  <HangmanWord/>
+      <HangmanWord wordToGuess={wordToGuess}
+        guessedLetters={guessedLetters} />
+  <Keyboard/>
 
      
     </div>
